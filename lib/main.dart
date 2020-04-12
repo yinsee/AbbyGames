@@ -160,10 +160,23 @@ class _MenuState extends State<Menu> {
           child: ListTile(
             contentPadding: EdgeInsets.all(30),
             leading: Image.asset('assets/math.png'),
-            title: Text('Math'),
+            title: Text('Math (Add)'),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) => MathGame(), fullscreenDialog: true));
+                  builder: (_) => MathGame(sign: true),
+                  fullscreenDialog: true));
+            },
+          ),
+        ),
+        Card(
+          child: ListTile(
+            contentPadding: EdgeInsets.all(30),
+            leading: Image.asset('assets/math.png'),
+            title: Text('Math (Subtract)'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => MathGame(sign: false),
+                  fullscreenDialog: true));
             },
           ),
         ),

@@ -4,6 +4,8 @@ import 'package:abbygames/main.dart';
 import 'package:flutter/material.dart';
 
 class MathGame extends StatefulWidget {
+  final bool sign;
+  MathGame({this.sign});
   @override
   _MathGameState createState() => _MathGameState();
 }
@@ -21,6 +23,7 @@ class _MathGameState extends State<MathGame> {
   @override
   void initState() {
     generate();
+    this.sign = widget.sign;
     super.initState();
   }
 
