@@ -30,7 +30,6 @@ class _MathGameState extends State<MathGame> {
   generate() {
     _textcontroller.text = '';
     v2 = Random().nextInt(5);
-    sign = Random().nextBool();
     if (sign)
       v1 = Random().nextInt(100);
     else {
