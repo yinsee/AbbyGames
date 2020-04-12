@@ -23,11 +23,11 @@ class _MathGameState extends State<MathGame> {
   @override
   void initState() {
     generate();
-    this.sign = widget.sign;
     super.initState();
   }
 
   generate() {
+    sign = widget.sign;
     _textcontroller.text = '';
     v2 = Random().nextInt(5);
     if (sign)
